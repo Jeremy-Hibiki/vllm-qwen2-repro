@@ -1,0 +1,24 @@
+[project]
+name = "vllm-demo"
+version = "0.1.0"
+description = "Add your description here"
+authors = [{ name = "Jeremy-Hibiki", email = "JeremyJiang430@outlook.com" }]
+dependencies = [
+    "setuptools",
+    "typer",
+    "torch",
+    "flashinfer",
+    "vllm==0.5.3.post1",
+]
+readme = "README.md"
+requires-python = "== 3.10"
+license = { text = "MIT" }
+
+[tool.rye]
+managed = true
+virtual = true
+dev-dependencies = ["mypy>=1.11.1", "ruff>=0.5.6"]
+
+[[tool.rye.sources]]
+name = "flashinfer"
+url = "https://flashinfer.ai/whl/cu121/torch2.3/"
